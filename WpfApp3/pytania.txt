@@ -6,3 +6,7 @@ Czy Jetpack Compose wykorzystuje język XML?
 nie
 Czy Angular jest frameworkiem do obsługi baz danych?
 nie
+Czy qt to framework w Javie?
+nie
+Czy aplikacje desktopowe mają przyszłość?
+nie

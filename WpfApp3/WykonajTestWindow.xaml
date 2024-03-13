@@ -20,6 +20,8 @@
             HorizontalAlignment="Center"
             Grid.ColumnSpan="2"
             FontSize="40"
+            TextWrapping="Wrap"
+            Padding="10"
             x:Name="trescPytanie_textblock"
             >
             Tresc pytanie</TextBlock>

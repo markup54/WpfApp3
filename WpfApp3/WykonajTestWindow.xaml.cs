@@ -21,6 +21,8 @@ namespace WpfApp3
     public partial class WykonajTestWindow : Window
     {
         List<Pytanie> PytanieList {get;set;} = new List<Pytanie>();
+        int numerPytania { get;set;}
+        int LiczbaPunktow { get; set; }
         public WykonajTestWindow()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace WpfApp3
         private void przygotujPytania()
         {
             PytanieList.Clear();
-            StreamReader streamReader = new StreamReader("pytania.txt");
+            StreamReader streamReader = new StreamReader("../../../pytania.txt");
             string trescpytania = streamReader.ReadLine();
             string odpowiedz= streamReader.ReadLine();
             while (trescpytania != null)
@@ -53,12 +55,29 @@ namespace WpfApp3
 
         private void tak_button_Click(object sender, RoutedEventArgs e)
         {
-
+            podliczPytania(true);
         }
-
+        private void podliczPytania(bool odp)
+        {
+            if (PytanieList[numerPytania].Odpowiedz == odp)
+            {
+                LiczbaPunktow++;
+            }
+            numerPytania++;
+            if (numerPytania == PytanieList.Count)
+            {
+                MessageBox.Show("wynik: "+LiczbaPunktow.ToString());
+                Close();
+            }
+            else
+            {
+                wyswietlPytanie(numerPytania);
+            }
+        }
         private void nie_button_Click(object sender, RoutedEventArgs e)
         {
-
+            podliczPytania(false);
         }
+        
     }
 }

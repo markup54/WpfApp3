@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,23 @@ namespace WpfApp3
         public DodajPytanieWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string tresc = Tresc_pytania.Text;
+           string odp;
+            if(odp_tak.IsChecked == true) {
+                odp = "tak";
+            }
+            else
+            {
+                odp = "nie";
+            }
+            StreamWriter streamWriter = new StreamWriter("../../../pytania.txt", true);
+            streamWriter.WriteLine(tresc);
+            streamWriter.WriteLine(odp);
+            streamWriter.Close();
         }
     }
 }

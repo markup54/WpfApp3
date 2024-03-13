@@ -33,5 +33,10 @@ namespace WpfApp3
             Close();
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window okno = new DodajPytanieWindow();
+            okno.Show();
+        }
     }
 }

@@ -19,6 +19,7 @@
                 FontSize="40"
                  Background="SteelBlue"
                 Foreground="LightBlue"
+                Click="Button_Click_1"
                 >
             Dodaj nowe pytanie</Button>
     </UniformGrid>

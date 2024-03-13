@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="DodajPytanieWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="DodajPytanieWindow" Height="350" Width="500">
+    <StackPanel>
+        <Label>Podaj treść pytania</Label>
+        <TextBox x:Name="Tresc_pytania"/>
+        <Label>Wybierz poprawną odpowiedź</Label>
+        <RadioButton GroupName="odp" x:Name="odp_tak" IsChecked="True">tak</RadioButton>
+        <RadioButton GroupName="odp" x:Name="odp_nie">nie</RadioButton>
+        <Button Click="Button_Click">Dodaj pytanie</Button>
+    </StackPanel>
 </Window>

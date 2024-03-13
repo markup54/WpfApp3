@@ -1,0 +1,2 @@
+Czy Qt programuje się w Javie?
+nie
